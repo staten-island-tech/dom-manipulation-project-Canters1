@@ -1,7 +1,8 @@
 DOMSelectors = {
     nameinput : document.querySelector("#name"),
+    imageinput : document.querySelector("#image"),
     form: document.querySelector("#form"),
-    h1s : document.querySelectorAll("h1"),
+    flexwrapper: document.querySelector(".flex-wrapper"),
 
 }
 
@@ -10,29 +11,19 @@ DOMSelectors.form.addEventListener('submit', function(event) {
 
   console.log(DOMSelectors.nameinput.value);
 
-  DOMSelectors.h1s.forEach( (h1) => (h1.textContent = DOMSelectors.nameinput.value)
-  );
-
-}); 
-
-// Create a button
-/* const button = document.getElementById("myButton");
-
-// Add an event listener to the button
-button.addEventListener("click", () => {
-  // Create a card
   const card = document.createElement("div");
   card.classList.add("card");
 
-  // Add some text to the card
-  const text = document.createElement("p");
-  text.textContent = "This is a card";
-  card.appendChild(text);
+  const Title = document.createElement("p");
+  Title.textContent = DOMSelectors.nameinput.value;
+  card.appendChild(Title);
 
-  // Append the card to the DOM
-  document.body.appendChild(card);
-}); */
+  const image = document.createElement("img");
+  image.src = DOMSelectors.imageinput.value;
+  image.classList.add("image");
+  card.appendChild(image);
 
+  DOMSelectors.flexwrapper.appendChild(card);
 
+}); 
 
-DOMSelectors.h1s.forEach((h1) => console.log(h1.textContent))
