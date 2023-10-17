@@ -30,6 +30,13 @@ input {
     position: absolute;
     bottom: 0px;
 }
-#delbutton {
+#del-last {
     background-color: red;
+}
+.delbutton {
+    background-color: rgb(87, 171, 209);
+    border-radius: 15%;
+    border: none;
+    height:25px;
+    width : 50px;
 }
