@@ -8,6 +8,7 @@ DOMSelectors = {
     cards : document.querySelectorAll(".card")
 }
 
+
 DOMSelectors.form.addEventListener('submit', function(event) { 
   event.preventDefault(); 
 
@@ -34,7 +35,14 @@ DOMSelectors.form.addEventListener('submit', function(event) {
   Actors.classList.add("card-sub");
   card.appendChild(Actors);
 
-  
+  const delbutton = document.createElement("button");
+  delbutton.classList.add("delbutton")
+  delbutton.textContent = "Delete";
+  delbutton.addEventListener('click', function(e) {
+    e.currentTarget.parentNode.remove();
+  },
+  );
+  card.appendChild(delbutton)
 
   DOMSelectors.flexwrapper.appendChild(card);
 
@@ -45,7 +53,7 @@ DOMSelectors.form.addEventListener('submit', function(event) {
 }); 
 DOMSelectors.Delete.addEventListener('submit', function(event) { 
   event.preventDefault(); 
-  const len = DOMSelectors.cards.len()
-  document.body.removeChild(DOMSelectors.cards[len-1]);
-  console.log(DOMSelectors.cards)
+  const flexbox = document.getElementById("cardflex");
+  const lastcard = flexbox.lastElementChild;
+  flexbox.removeChild(lastcard);
 });
