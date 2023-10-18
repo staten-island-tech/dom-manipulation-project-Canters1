@@ -53,7 +53,7 @@ DOMSelectors.form.addEventListener('submit', function(event) {
 }); 
 DOMSelectors.Delete.addEventListener('submit', function(event) { 
   event.preventDefault(); 
-  const flexbox = document.getElementById("cardflex");
+  const flexbox = DOMSelectors.flexwrapper;
   const lastcard = flexbox.lastElementChild;
   flexbox.removeChild(lastcard);
 });
