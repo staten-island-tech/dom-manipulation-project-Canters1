@@ -14,18 +14,19 @@ input {
 .card{
     width:27%;
     height:600px;
-    padding:20px;
+    padding-bottom:20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f9b234;
     border-radius: 5%;
     margin-bottom:20px;
+    overflow:hidden;
 }
 .image {
     width:auto;
     height:70%;
-    
+    margin: 5px;
 }
 
 #del-last {
