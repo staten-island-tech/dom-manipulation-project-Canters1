@@ -18,9 +18,7 @@ DOMSelectors.form.addEventListener('submit', function(event) {
       <img src="${DOMSelectors.imageinput.value}" class="image">
       <h3>Starring:</h3>
       <p class="card-sub">${DOMSelectors.actorinput.value}</p>
-      <form class="card-delete">
-      <input type="submit" value="Delete" class="delbutton">
-      </form>
+      <button class= "delbutton">Delete</button>
     </div>`
   };
    const movie = makemovie();
@@ -38,7 +36,12 @@ DOMSelectors.form.addEventListener('submit', function(event) {
   
   clearfields();
   
-  console.log(DOMSelectors.delete)
+  const deleteButtons = document.querySelectorAll('.delbutton');
+deleteButtons.forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.currentTarget.parentNode.remove();
+  });
+});
 });
 
 
