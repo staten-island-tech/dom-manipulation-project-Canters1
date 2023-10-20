@@ -50,3 +50,7 @@ input {
 .footer {
   flex-shrink: 0;
 }
+
+.card-sub {
+    font-size: 1.5rem;
+}
