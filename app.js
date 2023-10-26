@@ -37,11 +37,13 @@ DOMSelectors.form.addEventListener('submit', function(event) {
   clearfields();
   
   const deleteButtons = document.querySelectorAll('.delbutton');
-deleteButtons.forEach(button => {
-  button.addEventListener('click', function(e) {
-    e.currentTarget.parentNode.remove();
+  deleteButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.currentTarget.parentNode.remove();
+    });
   });
-});
+
+
 });
 
 
