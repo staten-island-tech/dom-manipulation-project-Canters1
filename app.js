@@ -8,10 +8,7 @@ DOMSelectors = {
 }
 
 
-DOMSelectors.form.addEventListener('submit', function(event) { 
-  event.preventDefault();
-  
-  function makemovie() {
+function makemovie() {
     return `
     <div class="card">
       <h2>${DOMSelectors.nameinput.value}</h2>
@@ -21,18 +18,22 @@ DOMSelectors.form.addEventListener('submit', function(event) {
       <button class= "delbutton">Delete</button>
     </div>`
   };
-   const movie = makemovie();
-{/* <button class= "delbutton" onclick="this.parentNode.remove()">Delete</button> */}
-  DOMSelectors.flexwrapper.insertAdjacentHTML(
-    "beforeend",
-    movie
-  );
 
-  function clearfields() {
+function clearfields() {
     DOMSelectors.nameinput.value =  "";
     DOMSelectors.imageinput.value =  "";
     DOMSelectors.actorinput.value =  "";
   }; 
+
+
+DOMSelectors.form.addEventListener('submit', function(event) { 
+  event.preventDefault();
+  
+  const movie = makemovie();
+  DOMSelectors.flexwrapper.insertAdjacentHTML(
+    "beforeend",
+    movie
+  );
   
   clearfields();
   
