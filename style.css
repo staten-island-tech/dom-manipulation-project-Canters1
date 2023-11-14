@@ -21,6 +21,8 @@ input {
     background-color: #f9b234;
     border-radius: 5%;
     margin-bottom:20px;
+    overflow-x:hidden;
+    overflow-y: visible;
 }
 .image {
     width:auto;
